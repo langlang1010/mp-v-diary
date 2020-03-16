@@ -1,0 +1,29 @@
+/* page/diary-write/index.wxss */
+
+textarea{
+  padding-right: 10px;
+  width: 100%;
+}
+
+.divLine {
+ padding: 5rpx;
+ width: 100%;
+}
+
+.image {
+  padding: 10rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.text-center {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;  
+  width: 100%;
+}
+
+#model_weather {
+  background-color: #ffffff; 
+}
+

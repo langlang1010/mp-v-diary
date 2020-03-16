@@ -1,0 +1,31 @@
+/* page/me/index.wxss */
+.me-image{
+  padding-top: 60rpx;
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+}
+
+.divLine {
+ padding: 5rpx;
+ width: 100%;
+}
+
+.me-diary-info {
+  padding: 20rpx;
+  size: 50
+}
+
+textarea{
+  padding-right: 10px;
+  width: 100%;
+}
+
+.index-bd {
+  padding: 0 30rpx 40rpx;
+}

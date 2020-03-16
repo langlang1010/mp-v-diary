@@ -1,0 +1,45 @@
+<!--page/diary-write/index.wxml-->
+<view >
+<i-card title="{{today_date}}" extra="{{today_week}}">
+    <view slot="content">
+      <textarea maxlength='500' placeholder-class="" bindinput="countNum"
+        placeholder='温馨提醒：微微日记提倡字雅文简，推荐控制在300字以内，最多不得超过500字。'
+        value='{{content}}' >
+      </textarea>
+    </view>
+  <view slot="footer">统计：{{length}}字</view>
+    
+</i-card>
+</view>
+<view class="divLine"></view>
+<view class="divLine"></view>
+
+<i-card title="请选择天气与心情">
+  <view slot="content">
+  <view class='text-center' >
+    <image class="image" src="{{weather}}" bindtap='img_show_weather'/>
+    <image class="image" src="{{smile}}" bindtap='img_show_smile'/>
+  </view> 
+  </view>
+
+  <view slot="footer">
+    <button type="primary" bindtap='save'>
+      保存
+    </button>
+  </view>
+</i-card>
+<i-drawer mode="left" visible="{{showLeft}}" bind:close="" >
+  <view class="demo-container" id="model_weather">
+    <block wx:for="{{weathers}}"wx:key="xxx"  wx:for-item="itemName" wx:for-index="index"  >
+     <image class="image" src="{{itemName}}" bindtap='img_weather' data-weather='{{index}}'/>
+    </block>
+  </view>
+</i-drawer>
+
+<i-drawer mode="right" visible="{{showRight}}" bind:close="" >
+  <view class="demo-container" id="model_weather">
+    <block wx:for="{{smiles}}"wx:key="yyy"  wx:for-item="itemName" wx:for-index="index"  >
+     <image class="image" src="{{itemName}}" bindtap='img_smile' data-smile='{{index}}'/>
+    </block>
+  </view>
+</i-drawer>

@@ -1,0 +1,34 @@
+<!--page/diary-about/index.wxml-->
+<!--page/me/index.wxml-->
+<view class="me-header">
+  <view class="text-center">
+    <image class="me-image" src='{{src_img}}'></image>
+  </view>
+  <view class="text-center">
+    <text class="me-diary-info">{{version}}</text>
+  </view>
+</view>
+
+<view class="caption-wrap">
+  <i-card  style='display:{{hideFeedback}}' title="关于" extra=">" bindtap="showAbout">
+    <view style='display:{{showAbout}}' slot="content">{{info}}</view>
+  </i-card>
+  <view class="divLine"></view>
+  <i-card  style='display:{{hideFeedback}}' title="建议" extra=">" bindtap="showAdvocate">
+    <view style='display:{{showAdvocate}}'  slot="content">{{advocate}}</view>
+  </i-card>
+  <i-card title="反馈" extra=">" bindtap="showFeedback">
+    <view style='display:{{showFeedback}}'  slot="content">
+     <textarea maxlength='300' placeholder-class=""
+        placeholder='欢迎反馈！非常感谢您宝贵的意见或建议！'>
+      </textarea>
+    </view>
+      <view style='display:{{showFeedback}}' slot="footer">
+        <i-button type="primary" bindtap='feedback'>立即反馈</i-button>
+      </view>
+  </i-card>
+  <view class="index-bd">
+    <button type="default" bindtap='back'>返回</button>
+  </view>
+</view>
+

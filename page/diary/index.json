@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-icon": "../../dist/icon/index",
+    "i-grid": "../../dist/grid/index",
+    "i-grid-item": "../../dist/grid-item/index",
+    "i-grid-label": "../../dist/grid-label/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-card": "../../dist/card/index",
+    "i-badge": "../../dist/badge/index",
+    "i-divider": "../../dist/divider/index",
+    "i-spin": "../../dist/spin/index"
+  },
+  "enablePullDownRefresh": true
+}

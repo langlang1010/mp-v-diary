@@ -1,0 +1,45 @@
+<view class="diary-index">
+  <view class="text-center" style='padding-top: 30rpx;padding-bottom:20rpx;'>
+    <i-button id="btn_left" bindtap='btn_search' inline shape="circle" type="">
+      <i-icon type="search" size="28" color="#80848f"></i-icon>
+    </i-button>
+    <i-button id="btn_left" inline shape="circle" size="large" type="">
+      微V日记
+    </i-button>
+    <i-button id="btn_left" bindtap='btn_write' inline shape="circle" type="">
+      <i-icon type="brush" size="28" color="#80848f"></i-icon>
+    </i-button>
+  </view>
+
+  <view class="index-bd" hidden='{{search_state}}'>
+    <view class="kind-list" bindtap='user_info'>
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="">
+          <view bindtap='btn_search' class="kind-list-text">{{search_date}}</view>
+          <image bindtap='btn_cancel' class="kind-list-img" src="../../image/other/Cancel.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <block wx:for="{{diaries}}" wx:key="xxx" wx:for-item="diary" wx:for-index="index">
+    <view class="divLine"></view>
+    <i-card class="date_format" title="{{diary.gmtCreate}}" extra="{{diary.week}}" bindtap="showDiary" data-diary="{{index}}">
+      <view slot="content">{{diary.minicontent}}...</view>
+    </i-card>
+    <view class="divLine"></view>
+  </block>
+
+  <view class="divLine"></view>
+  <view hidden='{{hideLoading}}' class="text-center">
+    <i-grid-item i-class="item">
+      <i-spin visible="{{showLoading}}" size=""></i-spin>
+    </i-grid-item>
+  </view>
+  <view hidden="{{hideEnd}}" class="text-center">
+    <i-divider content="下拉加载更多"></i-divider>
+  </view>
+  <view hidden="{{hideNoMore}}" class="text-center">
+    <i-divider content="加载已经完成,没有其他数据"></i-divider>
+  </view>
+</view>

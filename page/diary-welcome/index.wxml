@@ -1,0 +1,10 @@
+<view class="all">
+  <text class="text-center big-font">{{welcome}}</text>
+  <view class="text-center">
+    <image src='../../image/logo/logo.jpg' style='width:500rpx;'></image>
+  </view>
+</view>
+
+<i-modal title="授权请求" visible="{{authorized}}" actions="{{ actions }}" bind:click="handleClose">
+<i-button type="primary" bindtap='btn_auth' open-type="getUserInfo" bindgetuserinfo="getUserInfo" shape="circle" size="large">立即授权</i-button>
+</i-modal>

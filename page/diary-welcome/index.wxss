@@ -1,0 +1,15 @@
+.all {
+  width: 100%;
+  height: 100%;
+}
+
+.big-font {
+  padding-top: 20%;
+  font-size: 70rpx;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+}

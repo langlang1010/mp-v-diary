@@ -1,0 +1,45 @@
+<!--page/me/index.wxml-->
+<view class="me-header">
+  <view class="text-center">
+    <image class="me-image" src='{{src_img}}'></image>
+  </view>
+  <view class="text-center">
+    <text class="me-diary-info">{{me_name}}</text>
+  </view>
+
+  <view class="index-bd">
+    <view class="kind-list" bindtap='user_info'>
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="">
+          <view class="kind-list-text">个人信息</view>
+          <image class="kind-list-img" src="../../image/tab-bar/me.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view bindtap='unfinished' id="12" class="kind-list-item-hd">
+          <view class="kind-list-text">日记管理</view>
+          <image class="kind-list-img" src="../../image/other/manage.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="toStatistic">
+          <view class="kind-list-text">相关统计</view>
+          <image class="kind-list-img" src="../../image/other/book.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="about">
+          <view class="kind-list-text">关于</view>
+          <image class="kind-list-img" src="../../image/other/about.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

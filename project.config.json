@@ -1,0 +1,106 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"checkSiteMap": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.0",
+	"appid": "wx18507e9ecabec5f6",
+	"projectname": "test3",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "write",
+					"pathName": "page/diary-write/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "page/diary/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "me",
+					"pathName": "page/me/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "edit",
+					"pathName": "page/diary-edit/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "page/diary-about/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "welcome",
+					"pathName": "page/diary-welcome/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "userinfo",
+					"pathName": "page/diary-user-info/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "page/diary-search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "statistic",
+					"pathName": "page/diary-statistic/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,55 @@
+<!--page/diary-write/index.wxml-->
+<i-card title="{{diary.gmtCreate}}" extra="星期三">
+    <view slot="content">
+      <textarea maxlength='500' placeholder-class="" bindinput="countNum"
+        placeholder='温馨提醒：微微日记提倡字雅文简，推荐控制在300字以内，最多不得超过500字。'
+        value="{{diary.content}}">
+      </textarea>
+    </view>
+  <view slot="footer">统计：{{length}}字</view>
+    
+</i-card>
+
+<view class="divLine"></view>
+<view class="divLine"></view>
+
+<i-card title="请选择天气与心情">
+  <view slot="content">
+  <view class='text-center'>
+    <image class="image" src="{{weather}}" bindtap='img_show_weather'/>
+    <image class="image" src="{{smile}}" bindtap='img_show_smile'/>
+  </view> 
+  </view>
+  
+
+  <view slot="footer">
+    <button type="primary" bindtap='update'>
+      保存修改
+    </button>
+     <button type="warn" bindtap='deleteDiary'>
+      删除日记
+    </button>
+  </view>
+</i-card>
+
+<!--page/diary-write/index.wxml-->
+
+<i-drawer mode="left" visible="{{showLeft}}" bind:close="img_weath" >
+  <view class="demo-container" id="model_weather">
+    <block wx:for="{{weathers}}"wx:key="xxx"  wx:for-item="itemName" wx:for-index="index"  >
+     <image class="image" src="{{itemName}}" bindtap='img_weather' data-weather='{{index}}'/>
+    </block>
+  </view>
+</i-drawer>
+
+<i-drawer mode="right" visible="{{showRight}}" bind:close="img_smile" >
+  <view class="demo-container" id="model_weather">
+    <block wx:for="{{smiles}}"wx:key="yyy"  wx:for-item="itemName" wx:for-index="index"  >
+     <image class="image" src="{{itemName}}" bindtap='img_smile' data-smile='{{index}}'/>
+    </block>
+    <!-- <image class="image" src="{{smile1}}" bindtap='img_smile1'/>
+    <image class="image" src="{{smile2}}" bindtap='img_smile2'/>
+    <image class="image" src="{{smile3}}" bindtap='img_smile3'/>
+    <image class="image" src="{{smile4}}" bindtap='img_smile4'/> -->
+  </view>
+</i-drawer>

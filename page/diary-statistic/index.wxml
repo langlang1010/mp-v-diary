@@ -1,0 +1,146 @@
+<!--page/me/index.wxml-->
+<view class="me-header">
+  <view class="text-center">
+    <image class="me-image" src='{{src_img}}'></image>
+  </view>
+  <view class="text-center">
+  
+    <text class="me-diary-info">{{me_name}}</text>
+  </view>
+
+  <view class="index-bd">
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">总共 {{all_data.sum}} 篇</view>
+          <image class="kind-list-img" src="../../image/other/all.png"></image>
+        </view>
+      </view>
+    </view>
+     <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">已删除 {{all_data.deleted}} 篇</view>
+          <image class="kind-list-img" src="../../image/other/delete.png"></image>
+        </view>
+      </view>
+    </view>
+     <view wx:if="{{all_data.mood0}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">开心 {{all_data.mood0}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/smile1.png"></image>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{all_data.mood1}}"  class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">一般 {{all_data.mood1}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/soso.png"></image>
+        </view>
+      </view>
+    </view>
+    <view  wx:if="{{all_data.mood2}}"  class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">不开心 {{all_data.mood2}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/unhappy.png"></image>
+        </view>
+      </view>
+    </view>
+     <view  wx:if="{{all_data.mood3}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">哭 {{all_data.mood3}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/cry.png"></image>
+        </view>
+      </view>
+    </view>
+     <view  wx:if="{{unknown_mood}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">未知心情 {{unknown_mood}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/question.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{all_data.weather0}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">晴天 {{all_data.weather0}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/sun.png"></image>
+        </view>
+      </view>
+    </view>
+
+   <view  wx:if="{{all_data.weather1}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">晴与多云 {{all_data.weather1}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/sun-cloud.png"></image>
+        </view>
+      </view>
+    </view>
+   <view wx:if="{{all_data.weather2}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">多云 {{all_data.weather2}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/cloud.png"></image>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{all_data.weather3}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">风 {{all_data.weather3}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/wind.png"></image>
+        </view>
+      </view>
+    </view>
+    <view  wx:if="{{all_data.weather4}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">小雨 {{all_data.weather4}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/small-rain.png"></image>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{all_data.weather5}}" class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">大雨 {{all_data.weather5}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/rain.png"></image>
+        </view>
+      </view>
+    </view>
+     <view wx:if="{{all_data.weather6}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd">
+          <view class="kind-list-text">冰或小雪 {{all_data.weather6}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/small-snow.png"></image>
+        </view>
+      </view>
+    </view>
+     <view wx:if="{{all_data.weather7}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd">
+          <view class="kind-list-text">大雪 {{all_data.weather7}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/snow.png"></image>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{unknown_weather}}" class="kind-list" >
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" >
+          <view class="kind-list-text">未知天气 {{unknown_weather}} 篇</view>
+          <image class="kind-list-img" src="../../image/weather/question.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="index-bd">
+    <button type="demo" bindtap='back'>返回</button>
+  </view>
+</view>

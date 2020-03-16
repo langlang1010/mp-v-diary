@@ -1,0 +1,48 @@
+<!--page/me/index.wxml-->
+<view class="me-header">
+  <view class="text-center">
+    <image class="me-image" src='{{src_img}}'></image>
+  </view>
+  <view class="text-center">
+  
+    <text class="me-diary-info">{{me_name}}</text>
+  </view>
+
+  <view class="index-bd">
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="">
+          <view class="kind-list-text">性别</view>
+          <text>{{gender}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="">
+          <view class="kind-list-text">国家</view>
+          <text>{{country}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="">
+          <view class="kind-list-text">省份</view>
+          <text>{{province}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view id="12" class="kind-list-item-hd" bindtap="">
+          <view class="kind-list-text">城市</view>
+          <text>{{city}}</text>
+        </view>
+      </view>
+    </view>
+
+    <button type="default" bindtap='back'>返回</button>
+  </view>
+
+</view>
