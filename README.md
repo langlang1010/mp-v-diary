@@ -17,8 +17,14 @@
 请观看以下视频：
 [B站地址](https://www.bilibili.com/video/av96804300)
 
+### 后端源码
+后端源码地址: [https://github.com/langlang1010/mp-v-diary-serve](https://github.com/langlang1010/mp-v-diary-serve)
 
+### 相关问题
+请参考 [Q&A](https://github.com/langlang1010/mp-v-diary/blob/master/Q%26A.md)
 
+### 问题反馈
+欢迎提交反馈 [Isuue](https://github.com/langlang1010/mp-v-diary/issues)
 
 ### 方法小结
 
